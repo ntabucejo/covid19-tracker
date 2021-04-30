@@ -1,0 +1,86 @@
+@use '../../styles/helpers/colors' as *;
+
+.inspector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .location {
+    position: relative;
+    padding: 1rem 2rem;
+
+    .indicator {
+      background-color: $font-secondary-color;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 5px;
+    }
+  }
+
+  .cards {
+    display: grid;
+    gap: 1rem;
+
+    .card {
+      background-color: $background-secondary-color;
+      padding: 1rem 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-radius: 5px;
+
+      .indicator {
+        background-color: $indicator-color;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+
+        .category {
+          color: $font-secondary-color;
+          font-size: 0.75rem;
+        }
+
+        .digit {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1355px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .card {
+      .indicator {
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      &:hover {
+        .indicator {
+          background-color: $font-secondary-color;
+        }
+      }
+    }
+  }
+}

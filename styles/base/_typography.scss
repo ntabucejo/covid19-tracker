@@ -1,0 +1,10 @@
+@use '../helpers/colors' as *;
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+html,
+body,
+input,
+button {
+  font-family: 'Aldrich', sans-serif;
+  color: $font-primary-color;
+}

@@ -1,0 +1,25 @@
+@use '../helpers/colors' as *;
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: $background-primary-color;
+}
+
+input,
+button {
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}

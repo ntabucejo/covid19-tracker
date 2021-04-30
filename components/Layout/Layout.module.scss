@@ -1,0 +1,18 @@
+.appLayout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  header,
+  main,
+  footer {
+    padding: 1rem;
+  }
+
+  .headerLayout,
+  .mainLayout,
+  .footerLayout {
+    max-width: 1335px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,6 @@
+@use './base/normalize';
+@use './base/typography';
+
+::-webkit-scrollbar {
+  display: none
+}
